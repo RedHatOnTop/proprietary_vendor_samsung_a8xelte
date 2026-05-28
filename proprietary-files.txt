@@ -1,0 +1,248 @@
+# Proprietary blobs for Galaxy A8 2016 (SM-A810S/SKL)
+# Extracted from stock firmware A810SKSS2CTI1 (Android 7.0 Nougat)
+# Vendor partition blobs for LineageOS 20 (Android 13)
+#
+# Format: destination_path (relative to vendor partition root)
+# Lines starting with # are comments
+#
+# NOTE: This file contains ONLY a8xelte-specific blobs.
+# Common Exynos 7420 blobs are provided by:
+#   vendor/samsung/universal7420-common/universal7420-common-vendor.mk
+# (GPU, display HAL, OMX codecs, MFC/seiren firmware, common RIL,
+#  sensors, gatekeeper, keymaster, DRM/Widevine, BT HAL, GNSS HAL,
+#  power HAL, light HAL, camera core libs, fingerprint core, NFC HAL)
+#
+# Exynos 7420 vendor partition is 32-bit only.
+# All vendor/lib/ entries below are 32-bit ARM.
+
+###############################################################################
+# Audio HAL and libs
+###############################################################################
+vendor/lib/hw/android.hardware.audio@2.0-impl.so
+vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
+vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so
+vendor/lib/hw/audio.primary.default.so
+vendor/lib/hw/audio.r_submix.default.so
+vendor/lib/hw/audio.usb.default.so
+vendor/lib/hw/audio.a2dp.default.so
+vendor/lib/libaudiohookclient.so
+vendor/lib/libalsautils.so
+vendor/lib/libeffects.so
+vendor/lib/libtinycompress.so
+vendor/lib/libtinyalsa.so
+
+# Audio firmware (Clearwater DSP - vendor partition copies)
+vendor/firmware/clearwater-dsp3-tx-nb.bin
+vendor/firmware/clearwater-dsp3-tx-swb-interview.bin
+vendor/firmware/clearwater-dsp3-tx-wb.bin
+vendor/firmware/clearwater-dsp4-rx-anc-nb.bin
+vendor/firmware/clearwater-dsp4-rx-anc-wb.bin
+vendor/firmware/clearwater-dsp6-lpsd-control.bin
+vendor/firmware/clearwaterc-dsp1-trace.wmfw
+vendor/firmware/clearwaterc-dsp2-tx-nb.wmfw
+vendor/firmware/clearwaterc-dsp2-tx-swb.wmfw
+vendor/firmware/clearwaterc-dsp2-tx-wb.wmfw
+vendor/firmware/clearwaterc-dsp3-tx-nb.wmfw
+vendor/firmware/clearwaterc-dsp3-tx-swb.wmfw
+vendor/firmware/clearwaterc-dsp3-tx-wb.wmfw
+vendor/firmware/clearwaterc-dsp4-rx-anc-nb.wmfw
+vendor/firmware/clearwaterc-dsp4-rx-anc-wb.wmfw
+vendor/firmware/clearwaterc-dsp5-dsm.wmfw
+vendor/firmware/clearwaterc-dsp6-ez2-control.wmfw
+
+# Audio config
+vendor/etc/SoundBoosterParam.txt
+vendor/etc/audio_effects_common.conf
+vendor/etc/audio_policy.conf
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/default_volume_tables.xml
+
+###############################################################################
+# Camera HAL and libs (Samsung-specific camera provider)
+###############################################################################
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/vendor.samsung.camera.device@1.0-impl.so
+vendor/lib/vendor.samsung.camera.device@3.2-impl.so
+vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
+vendor/lib/vendor.samsung.hardware.camera.device@3.2.so
+vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
+vendor/lib/libsemcamera_jni.so
+
+# Camera ISP firmware (a8xelte-specific sensors)
+vendor/firmware/fimc_is_fw2_3p3.bin
+vendor/firmware/setfile_3p3.bin
+vendor/firmware/setfile_4h9.bin
+
+# Camera image processing
+vendor/lib/libsaiv.so
+vendor/lib/libsaiv_BeautySolution.so
+vendor/lib/libsaiv_BeautySolutionLite.so
+vendor/lib/libsaiv_FacePreProcessing.so
+vendor/lib/libsaiv_HprFace_FD_api.so
+vendor/lib/libsaiv_HprFace_FD_jni.so
+vendor/lib/libsaiv_HprFace_LD_api.so
+vendor/lib/libsaiv_HprFace_LD_jni.so
+vendor/lib/libsaiv_HprFace_utils_api.so
+vendor/lib/libsaiv_HprFace_utils_jni.so
+vendor/lib/libsaiv_vision.so
+vendor/lib/libHpr_LocFace_mvfd_v1.0.so
+vendor/lib/libHpr_LocLandmark_sdm_v1.0.so
+vendor/lib/libDualShotMattingCoreLIB.so
+vendor/lib/libSelfieToneCurveCorrection.so
+vendor/lib/libsmart_cropping.so
+vendor/lib/libsnap_caffe.so
+vendor/lib/libCreateSceneMap.so
+vendor/lib/libQjpeg.so
+vendor/lib/libquram.so
+vendor/lib/libquramagifencoder.so
+vendor/lib/libsecimaging.so
+vendor/lib/libsecjpeginterface.so
+vendor/lib/libsecjpegquram.so
+vendor/lib/libSEF.so
+vendor/lib/libSRIBSE_Lib.so
+vendor/lib/libexifa.so
+vendor/lib/libjpega.so
+vendor/lib/libvideofittinghelper.so
+vendor/lib/libsurfaceutil.so
+vendor/lib/libSDKRecognitionText.so
+vendor/lib/libOpenCv.so
+vendor/lib/libLifevibes_lvverx.so
+vendor/lib/libLifevibes_lvvetx.so
+
+###############################################################################
+# Vibrator
+###############################################################################
+vendor/lib/hw/vibrator.default.so
+
+###############################################################################
+# RIL / Modem (a8xelte-specific)
+###############################################################################
+vendor/lib/libsecril-client.so
+vendor/lib/libatparser.so
+vendor/lib/vendor.samsung.hardware.radio@1.0.so
+
+###############################################################################
+# Sensors (device-specific)
+###############################################################################
+vendor/lib/hw/cellgeofence.default.so
+
+###############################################################################
+# Fingerprint (device-specific sensors)
+###############################################################################
+vendor/lib/vendor.samsung.hardware.biometrics.fingerprint@2.1.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib/libsynaFpSensorTestNwd.so
+
+###############################################################################
+# NFC (a8xelte uses S3NRN81, not S3FWRN5)
+###############################################################################
+vendor/lib/hw/vendor.samsung.hardware.nfc@1.0-impl.so
+vendor/lib/vendor.samsung.hardware.nfc@1.0.so
+vendor/etc/libnfc-brcm.conf
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+
+###############################################################################
+# Media
+###############################################################################
+vendor/lib/libMP4Converter.so
+
+###############################################################################
+# DRM
+###############################################################################
+vendor/lib/libSamsungPkcs11Wrapper.so
+vendor/lib/libopensslsmime.so
+
+###############################################################################
+# Keymaster / TrustZone (Samsung-specific implementations)
+###############################################################################
+vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
+vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
+vendor/lib/libMcClient.so
+vendor/lib/libMcRegistry.so
+vendor/lib/libtlc_comm.so
+vendor/lib/libtlc_tz_ccm.so
+vendor/lib/libsec_sem.so
+vendor/lib/libsecdepth.so
+vendor/lib/libsechelper_engine.so
+vendor/lib/libsecpkcs11_engine.so
+vendor/lib/libsecure_storage.so
+vendor/lib/libsecure_storage_jni.so
+vendor/lib/libucmnativecrypto.so
+vendor/lib/libucsengine.so
+
+###############################################################################
+# Bluetooth (BCM43455 firmware - a8xelte uses BCM43455, not BCM4358/4359)
+###############################################################################
+vendor/lib/libbt-vendor.so
+vendor/firmware/bcm43455_V0168.0320.hcd
+
+###############################################################################
+# WiFi (BCM43455 bcmdhd)
+###############################################################################
+vendor/lib/libwifi-hal.so
+vendor/lib/libwifiucmkeystorehal.so
+vendor/lib/libwpa_client.so
+vendor/lib/libcld80211.so
+vendor/lib/vendor.samsung.frameworks.ucm.wifi@1.0.so
+vendor/etc/wifi/bcmdhd_sta.bin
+vendor/etc/wifi/bcmdhd_apsta.bin
+vendor/etc/wifi/bcmdhd_mfg.bin
+vendor/etc/wifi/bcmdhd_clm.blob
+vendor/etc/wifi/bcmdhd_sta.bin_blob
+vendor/etc/wifi/bcmdhd_apsta.bin_blob
+vendor/etc/wifi/bcmdhd_mfg.bin_blob
+vendor/etc/wifi/nvram.txt
+vendor/etc/wifi/cred.conf
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+
+###############################################################################
+# GPS / GNSS (Samsung-specific GNSS HAL)
+###############################################################################
+vendor/lib/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib/vendor.samsung.hardware.gnss@1.0.so
+
+###############################################################################
+# Power
+###############################################################################
+vendor/lib/vendor.samsung.hardware.miscpower@1.0.so
+
+###############################################################################
+# Lights
+###############################################################################
+vendor/lib/hw/lights.exynos5.so
+
+###############################################################################
+# Thermal
+###############################################################################
+vendor/etc/thermal_info_config.json
+
+###############################################################################
+# Other vendor libs
+###############################################################################
+vendor/lib/libandroid_ssrm.so
+vendor/lib/libapa_jni.so
+vendor/lib/libcordon.so
+vendor/lib/libdapjni.so
+vendor/lib/libdmbhybridclient.so
+vendor/lib/libfactoryutil.so
+vendor/lib/libjack.so
+vendor/lib/libknox_remotedesktopclient.so
+vendor/lib/libMVersionCk.so
+vendor/lib/libomission_avoidance.so
+vendor/lib/libpa.so
+vendor/lib/libremotedesktop_client.so
+vendor/lib/libsamsungSoundbooster_plus.so
+vendor/lib/libsomp.so
+vendor/lib/libspictrl.so
+
+###############################################################################
+# Public libraries (for linker namespace)
+###############################################################################
+vendor/etc/public.libraries.txt
